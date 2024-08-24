@@ -6,7 +6,7 @@
   <link href="https://scanfup.github.io/atom.xml" rel="self"/>
   
   <link href="https://scanfup.github.io/"/>
-  <updated>2024-10-23T14:00:00.000Z</updated>
+  <updated>2024-08-25T14:00:00.000Z</updated>
   <id>https://scanfup.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fomalhaut博客搭建</title>
+    <link href="https://scanfup.github.io/posts/1870e2ac.html"/>
+    <id>https://scanfup.github.io/posts/1870e2ac.html</id>
+    <published>2024-08-25T10:19:03.000Z</published>
+    <updated>2024-08-25T14:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>经过15天的时间，本菜鸡也是把fomalhaut大佬的博客全盘复制下来了，流程github的部署流程大佬在博客中已经说的很清楚了，我这里对此再简单说明一下，然后记录一下这里边遇到的一些小坑</p><hr><h1>博客搭建</h1><p>直接参考大佬的博客文章就行，在魔改教程里，github部署，图床，各种魔改，以及一些基本功能的配置，都解释的很详细，在此不过多赘述</p><p><a href="https://www.fomal.cc/">这是大佬的博客链接</a></p><hr><h1>主要问题</h1><p>下面主要说一下我在此次搭建过程中遇到的主要问题</p><h2 id="配置文件">配置文件</h2><p>这里有两个配置文件</p><p><img src="https://cdn-fusion.imgimg.cc/i/2024/iXYCMkFH1xbvVxTY.png" alt=""></p><p>其中我们的大部分功能都是在config.butterfly中配置的，该文件的优先级比config大，当两个文件中中又完全相同的功能的时候，config.butterfly会优先覆盖config中相同的功能</p><p>**那config.butterfly文件是怎么来的呢？**这是该主题的配置文件，只需将该主题的config文件复制一份添加到根目录中，然后对此进行修改</p><p><s>详细流程不做过多阐述</s></p><h2 id="一些需要注意的点">一些需要注意的点</h2><ol><li>注意路径一定要用url包括，不然无法显示</li></ol><p><img src="https://cdn-fusion.imgimg.cc/i/2024/mAtlfyvAOSTJpie0.png" alt=""></p><h2 id="各种文章书写语法">各种文章书写语法</h2><h3 id="时间轴">时间轴</h3><p>时间轴参考以下语法</p><p><img src="https://cdn-fusion.imgimg.cc/i/2024/5meDWeRUFuuTlk1M.png" alt=""></p><p>其他的俺还没整明白，俺也不知道俺能菜到什么地步呜呜呜</p>]]></content>
+    
+    
+    <summary type="html">关于博客搭建遇到的一些问题</summary>
+    
+    
+    
+    <category term="博客搭建" scheme="https://scanfup.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客搭建" scheme="https://scanfup.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>say一些东西</title>
