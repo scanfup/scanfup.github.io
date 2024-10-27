@@ -11,27 +11,27 @@
   </url>
   
   <url>
+    <loc>https://scanfup.github.io/posts/0.html</loc>
+    
+    <lastmod>2024-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://scanfup.github.io/posts/0.html</loc>
+    
+    <lastmod>2024-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://scanfup.github.io/posts/1c171eeb.html</loc>
     
     <lastmod>2024-10-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://scanfup.github.io/posts/0.html</loc>
-    
-    <lastmod>2024-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://scanfup.github.io/posts/0.html</loc>
-    
-    <lastmod>2024-08-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -83,15 +83,6 @@
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/box/gallery/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://scanfup.github.io/box/animation/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
@@ -101,16 +92,7 @@
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/life/games/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://scanfup.github.io/personal/about/index.html</loc>
+    <loc>https://scanfup.github.io/box/gallery/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -120,6 +102,15 @@
   
   <url>
     <loc>https://scanfup.github.io/site/census/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://scanfup.github.io/life/games/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -138,6 +129,15 @@
   
   <url>
     <loc>https://scanfup.github.io/life/music/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://scanfup.github.io/personal/about/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
