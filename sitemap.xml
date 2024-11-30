@@ -101,25 +101,7 @@
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/box/animation/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://scanfup.github.io/tags/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://scanfup.github.io/box/gallery/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -137,16 +119,7 @@
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/personal/about/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://scanfup.github.io/life/movies/index.html</loc>
+    <loc>https://scanfup.github.io/box/animation/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -164,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/site/census/index.html</loc>
+    <loc>https://scanfup.github.io/box/gallery/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -173,7 +146,25 @@
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/site/time/index.html</loc>
+    <loc>https://scanfup.github.io/life/movies/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://scanfup.github.io/personal/about/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://scanfup.github.io/site/census/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -192,6 +183,15 @@
   
   <url>
     <loc>https://scanfup.github.io/social/link/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://scanfup.github.io/site/time/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -241,14 +241,14 @@
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/tags/hexo/</loc>
+    <loc>https://scanfup.github.io/tags/java/</loc>
     <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/tags/java/</loc>
+    <loc>https://scanfup.github.io/tags/hexo/</loc>
     <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -278,14 +278,14 @@
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/categories/hexo/</loc>
+    <loc>https://scanfup.github.io/categories/java/</loc>
     <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://scanfup.github.io/categories/java/</loc>
+    <loc>https://scanfup.github.io/categories/hexo/</loc>
     <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
