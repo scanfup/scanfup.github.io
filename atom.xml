@@ -6,7 +6,7 @@
   <link href="https://scanfup.github.io/atom.xml" rel="self"/>
   
   <link href="https://scanfup.github.io/"/>
-  <updated>2024-11-23T04:13:36.695Z</updated>
+  <updated>2024-12-22T09:03:27.741Z</updated>
   <id>https://scanfup.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://scanfup.github.io/posts/0.html"/>
+    <id>https://scanfup.github.io/posts/0.html</id>
+    <published>2024-12-21T14:24:13.348Z</published>
+    <updated>2024-12-22T09:03:27.741Z</updated>
+    
+    <content type="html"><![CDATA[<h1>赋分制是个什么东西</h1><p>赋分制的核心是根据考生成绩进行等级划分，并按照等级赋予相应的分数。这一制度的实施，旨在解决传统高考中不同科目之间分数不可比的问题，使不同科目之间的分数具有更强的可比性。</p><h1>考研你都需要知道些什么</h1><p>计算机学科专业基础综合（408）试卷满分150分；考试时间180分钟；</p><p>试卷内容结构：</p><p>数据结构45分，计算机组成原理45分，操作系统35分，<a href="https://zhida.zhihu.com/search?content_id=104724908&amp;content_type=Article&amp;match_order=1&amp;q=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C&amp;zhida_source=entity">计算机网络</a>25分；</p><p>试卷题型结构：单项选择题，80分（40小题，每小题2分）；综合题，70分；</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;赋分制是个什么东西&lt;/h1&gt;
+&lt;p&gt;赋分制的核心是根据考生成绩进行等级划分，并按照等级赋予相应的分数。这一制度的实施，旨在解决传统高考中不同科目之间分数不可比的问题，使不同科目之间的分数具有更强的可比性。&lt;/p&gt;
+&lt;h1&gt;考研你都需要知道些什么&lt;/h1&gt;
+&lt;p&gt;计算机学科</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://scanfup.github.io/posts/0.html"/>
+    <id>https://scanfup.github.io/posts/0.html</id>
+    <published>2024-12-16T12:07:29.798Z</published>
+    <updated>2024-12-16T13:33:39.909Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="类斐波那契循环数">类斐波那契循环数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="type">int</span> arr[<span class="number">1000010</span>];</span><br><span class="line"><span class="type">bool</span> <span class="title function_">key</span><span class="params">(<span class="type">int</span> k)</span>&#123;</span><br><span class="line"><span class="type">int</span> num=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">string</span> str=to_string(k);</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">arr[num++]=str[i]-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> l=<span class="number">0</span>,r=num<span class="number">-1</span>;</span><br><span class="line"><span class="type">int</span> shix=<span class="number">0</span>; </span><br><span class="line"><span class="keyword">while</span>(shix&lt;k)&#123;</span><br><span class="line">shix=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=l;i&lt;=r;i++)&#123;</span><br><span class="line">shix+=arr[i]; </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(shix==k)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">arr[num++]=shix;</span><br><span class="line"><span class="comment">//判断后不相同，重新求和 </span></span><br><span class="line">l++,r++;</span><br><span class="line">&#125;<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">signed</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="type">int</span> k=<span class="number">1e7</span>;</span><br><span class="line"><span class="keyword">while</span>(key(k--))&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;k+<span class="number">1</span>;</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>思路就是：找最大嘛，那就从最大往下减-&gt;key函数判断这个数是否符合条件-&gt;把这个整数的每一个位转化为数组-&gt;然后每次求n项和后加到后边，更新这个数列-&gt;直至找到为止，若找到就返回false</p><p><code>这里l，r是控制我每次对哪三个数求和</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;类斐波那契循环数&quot;&gt;类斐波那契循环数&lt;/h2&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;l</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>大数据周赛</title>
