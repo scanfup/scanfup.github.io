@@ -4,6 +4,71 @@
   
     
     <entry>
+      <title></title>
+      <link href="/posts/0.html"/>
+      <url>/posts/0.html</url>
+      
+        <content type="html"><![CDATA[<ul><li>ut：时间戳</li><li>sign：签名认证，一般情况多数加密参数存在</li></ul><p>正则一般是如何提取的，有什么技巧i</p><h1>看源码</h1><p>首先看一下源码，发现源码中没有任何信息，那么就看一下网络请求</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/posts/0.html"/>
+      <url>/posts/0.html</url>
+      
+        <content type="html"><![CDATA[<p>无论是原型对象和实例对象都有 __ proto__</p><p>原型对象有  prototype</p><p>a.prototype  如果不是undefined  就说明a对象 是原型对象</p><p>原型对象和实例对象的函数  this 指向不同</p><p>实例对象</p><p>function a(){</p><p>​console.log(this)</p><p>}</p><p>谁调用 this就指向谁</p><p>原型对象</p><p>function pro(){</p><p>​this.a =1</p><p>}</p><p>var  aaa = new pro()  this指向的是原型对象的实例对象  也就是aaa</p><p>其中 pro 就是原型对象</p><p>构造函数的属性和原型对象的属性不同</p><p>对象._ _ proto_ _ 就是找这个对象的父对象</p><p>aaa._ <em>proto</em>___ 就是 原型对象</p><p>最底层就是object</p><p>object.__ pooto__  就是null了</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/posts/0.html"/>
+      <url>/posts/0.html</url>
+      
+        <content type="html"><![CDATA[<p>js逆向的过程</p><p>抓包—调试----脱离浏览器环境（让浏览器的js代码在本地运行）  本地环境（node.js 封装的V8引擎）</p><h1>Object.defineProperty()</h1><p>静态方法会直接在一个对象上定义一个新属性，或修改其现有属性，并返回此对象。</p><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen"><code>Object.isFrozen()</code></a></p><p>判断对象是否已经冻结。</p><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed"><code>Object.isSealed()</code></a></p><p>判断对象是否已经封闭。</p><p>weixin.code   是小程序  的code  是 app生成的  没办法逆向出来  只能第三方做的hook</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/posts/0.html"/>
+      <url>/posts/0.html</url>
+      
+        <content type="html"><![CDATA[<h1>网络协议：</h1><h2 id="TCP">TCP</h2><p>安全</p><p>速度慢</p><p>《三次握手》</p><p>1、客户端找到服务器 ：我来了！</p><p>2、服务器 找到客户端： 你确定来了？</p><p>3、客户端再发给服务器：我确定我来了</p><p>网站基本都是走的TCP协议</p><h2 id="UDP">UDP</h2><p>不能保证数据完整性</p><p>速度快</p><p>TCP和UDP 都是底层协议，我们是管不了的</p><p>我们能处理的就是 顶层协议</p><h2 id="顶层协议">顶层协议</h2><p>由开发这个软件的开发者开发的协议</p><p>协议：我怎么样告诉你我是谁，以及我怎么告诉你数据的格式</p><p>HTTP  HTTPS</p><p>FTP  发文件的协议</p><p>SMTP  POP3  发邮件的协议</p><p>MQTT</p><p>HTTP 80端口 ——&gt; https 443端口</p><p><a href="HTTPS://hao.360.com">HTTPS://hao.360.com</a></p><p>https 协议</p><p><a href="http://360.com">360.com</a> 主域名</p><p><a href="http://hao.360.com">hao.360.com</a> 二级域名  ip地址  一个域名对应一个ip地址</p><h3 id="http-https-send">http    -&gt; https    send</h3><p>请求头</p><p>请求体</p><p>响应头</p><p>响应体</p><h3 id="websocket-websockets">websocket -&gt; websockets</h3><p>new websocket  创建websocket的位置</p><p>测试网址  <a href="http://www.websocket-test.com/">http://www.websocket-test.com/</a></p><p><img src="C:%5CUsers%5Chp%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230810172032425.png" alt="image-20230810172032425"></p><p>Status Code: 101 Switching Protocols</p><p>请求头（以下都是不能删除的）</p><ol><li>Connection: Upgrade  #代表协议升级</li><li>Host: 124.222.224.186:8800</li><li>Origin: <a href="http://www.websocket-test.com">http://www.websocket-test.com</a></li><li>Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits</li><li>Sec-WebSocket-Key: pjJ9hSUw3F+RVRsXlRz5Ow==  #升级加密的key 由客户端随机生成</li><li>Sec-WebSocket-Version: 13 #升级到什么版本</li><li>Upgrade: websocket #升级成什么协议</li><li>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko)Chrome/95.0.4638.69 Safari/537.36</li></ol><p>messages： 看发了什么信息的</p><p>虽然 此网站 显示 是明文，但是其实可以发好几种数据，</p><p>可发的数据类型 ：字节集    string   一般直接认为是字节集</p><p>websocket 是一次请求一直连接  而 http是一次请求一次连接</p><p>http  短连接</p><p>websocket  长连接</p><p>抓包 只看 三类  XHR  WS   document</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/posts/0.html"/>
+      <url>/posts/0.html</url>
+      
+        <content type="html"><![CDATA[<p>编辑器： 秀米 135编辑器 壹伴编辑器（推荐）</p><p>正文：15，中文细体 两端缩进16</p><p>封面制作：canva,创客贴</p><p>图片：https;<a href="//www.pexels.com/zh-cn/(%E5%9B%BE%E7%89%87%E5%85%B3%E9%94%AE%E5%AD%97%E5%AF%BB%E6%89%BE)">//www.pexels.com/zh-cn/(图片关键字寻找)</a></p><p>寻找文案灵感：顶尖文案（TOPYS） 清博大数据（分析） 、 微博热搜</p><p>涨粉：受众身边</p><p>变现：流量主：500人粉丝 推</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>做饭</title>
       <link href="/posts/7414cfa6.html"/>
       <url>/posts/7414cfa6.html</url>
@@ -21,6 +86,31 @@
         <tags>
             
             <tag> 家庭小灶 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js逆向</title>
+      <link href="/posts/e8768110.html"/>
+      <url>/posts/e8768110.html</url>
+      
+        <content type="html"><![CDATA[<h1>js基础</h1><h2 id="js输出">js输出</h2><ul><li>使用window.alert()弹出警告框</li><li>使用document.write()方法将内容写到html文档中</li><li>使用innerHTML写入到html元素</li><li>使用console.log()写入到浏览器的控制台</li></ul><h2 id="正则表达式">正则表达式</h2><ul><li><strong>search()</strong> 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。</li><li><strong>replace()</strong> 方法用于在字符串中用一些字符串替换另一些字符串，或替换一个与正则表达式匹配的子串</li></ul><h2 id="锁定变量">锁定变量</h2><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250120150738692.png" alt="image-20250120150738692"></p><h2 id="异步">异步</h2><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250121103407055.png" alt="image-20250121103407055"></p><h2 id="平坦流">平坦流</h2><p>打断分析流程</p><p>出现特征<code>warp 或者 u.prev = u.next</code></p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250121104826346.png" alt="image-20250121104826346"></p><p>里边的u.next()是下一次要执行的条件</p><h2 id="eval">eval</h2><p><code>eval</code> 是 JavaScript 中的一个内置函数，用于将字符串作为代码进行解析和执行。它的基本语法如下：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>(string);</span><br></pre></td></tr></table></figure><p>DiffCopyInsert</p><p>其中 <code>string</code> 是一个包含 JavaScript 代码的字符串。<code>eval</code> 会将这个字符串作为实际的 JavaScript 代码来执行，并返回执行结果。</p><ol><li><p><strong>基本用法</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>(<span class="string">&quot;console.log(&#x27;Hello, World!&#x27;);&quot;</span>);</span><br></pre></td></tr></table></figure><p>DiffCopyInsert</p><p>这段代码会输出 <code>Hello, World!</code></p></li></ol><h1>js调试</h1><h2 id="123456">123456</h2><p>123456的md5加密<strong>32位</strong></p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250118195541745.png" alt="image-20250118195541745"></p><p>四十位密文的一般为sha1加密</p><h2 id="控制台-搜索">控制台 搜索</h2><p>定位的位置比较准确，搜到的位置比较多，要自己进行筛选，容易搜不到</p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250118195922787.png" alt="image-20250118195922787"></p><h2 id="DOM">DOM</h2><p>HTML DOM时间允许JavaScript在THML文档元素中注册不同事件处理程序，事件通常与函数结合使用，函数不会在事件发生前被执行</p><p>dom元素断点</p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250120205234901.png" alt="image-20250120205234901"></p><h2 id="断点">断点</h2><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250118205918124.png" alt="image-20250118205918124"></p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250118213753982.png" alt="image-20250118213753982"></p><p><strong>加密的流程大概就是 用户输入明文-&gt;经过了一些方法-&gt;加密函数-&gt;拼装封包-&gt;发包函数-&gt;浏览器的发包函数</strong></p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250120210720373.png" alt="image-20250120210720373"></p><h2 id="寻找合适事件js文件-dom事件">寻找合适事件js文件 dom事件</h2><p>定位的位置比较靠前</p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250119125131755.png" alt="image-20250119125131755"></p><p>可以在这里抓包之后打开js</p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250120204250207.png" alt="image-20250120204250207"></p><h2 id="XHR断点">XHR断点</h2><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250119162050009.png" alt="image-20250119162050009"></p><p><strong>优点</strong>：定位的位置在发包函数，我们可以跟栈，<strong>缺点</strong>：只能用于XHR的数据包</p><h2 id="watch-变量监控">watch 变量监控</h2><h2 id="本地替换">本地替换</h2><p>本地替换就是使用本地的文件夹，将目标js文件复制到该文件夹并进行替换，用于打断点或者无限debugger</p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250124200337388.png" alt="image-20250124200337388"></p><p><img src="C:/Users/%E4%BE%AF%E5%8D%93%E6%9E%97/AppData/Roaming/Typora/typora-user-images/image-20250124203447114.png" alt="image-20250124203447114"></p><h2 id="Fiddler">Fiddler</h2><p>Fiddler是一个抓包工具</p><p>那么既然浏览器可以抓包，那么为什么要用Fiddler呢？</p><p><strong>因为浏览器抓包抓不全，有些包如果同一个url返回一个200返回一个403，那么这时候浏览器为了自身效率，就会自动把这两个包删除，就是两个相同的url地址，返回两次数据，那么浏览器就会把第一次返回的删掉</strong></p><h2 id="XHR">XHR</h2><p>XHR全名HMLHttpRequest，大致和request相同，</p><h2 id="websocket">websocket</h2><p>webscoket是做一些实时弹幕，或者聊天室</p><h1>抓包</h1><h2 id="document">document</h2><p>如果是document包，那么拿着域名去elements找</p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250120211847947.png" alt="image-20250120211847947"></p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250120212031190.png" alt="image-20250120212031190"></p><h2 id="jsonp">jsonp</h2><p>一般是全局搜索，或则元素搜索jsonp</p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250120214545329.png" alt="image-20250120214545329"></p><h2 id="XHR-2">XHR</h2><p>xhr的直接找包里边的js，然后开始刷包调栈</p><p><img src="https://raw.githubusercontent.com/scanfup/img-bag1/main/image-20250120221527304.png" alt="image-20250120221527304"></p><p>问题，为什么我的断点，断不到东西啊，</p><p>另外调用栈还没试</p><h2 id="HOOK">HOOK</h2><h1>网络基础</h1><h2 id="curl">curl</h2><p>url是客户端的URL工具，使用在服务器之间传输数据的开源命令行工具和跨平台的库，包括用户代理，握手数据，端口等详细信息。</p><h2 id="ajax">ajax</h2><p>异步的javascript+xml，ajax不是新的编程语言，而是一种使用现有标准的新方法，ajax是与服务器交换数据并更新部分网页的艺术，在不重新加载整个页面对的情况下。</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h1>混淆</h1><h2 id="控制流平坦化">控制流平坦化</h2><p>控制流平坦化技术会对原始代码的控制流结构进行重组，将代码中的各个基本块（一段顺序执行且没有分支，除了末尾可能有一个无条件跳转的代码片段）合并到一个大的块中，并引入一个状态变量和一个大型的多路分支（例如一个大的switch语句）来模拟原来的控制流。</p><h1>加密</h1><h2 id="RSA">RSA</h2><p>rsa加密常见标志：setpublickey方法，js实现加密可以用jsencrypt加密库</p><h2 id="AES">AES</h2><p>aes加密的搜索关键词有AES，mode，padding</p><h2 id="DES">DES</h2><p>DES加密的搜索关键词有DES，mode，padding</p><h2 id="SHA1">SHA1</h2><p>sha1的关键词就是sha1</p><h2 id="MD5">MD5</h2><p>md5加密搜索MD5即可</p><h2 id="bs64">bs64</h2><p>base64</p><h2 id="OB混淆">OB混淆</h2><p>OB 混淆是指将 JavaScript 代码中的变量名、函数名、字符串等替换为无意义的字符串，从而增加代码的保护性和防止代码的逆向分析。此外，它还可以在代码中添加死代码、无用的函数等，增加代码的复杂度和难以理解性，从而增加代码的保密性</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> js逆向 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 爬虫 </tag>
             
         </tags>
       
@@ -67,18 +157,12 @@
     
     
     <entry>
-      <title>考研知识点</title>
-      <link href="/posts/e5935d82.html"/>
-      <url>/posts/e5935d82.html</url>
+      <title>高等数学</title>
+      <link href="/posts/93e4730e.html"/>
+      <url>/posts/93e4730e.html</url>
       
-        <content type="html"><![CDATA[<h1>赋分制是个什么东西</h1><p>赋分制的核心是根据考生成绩进行等级划分，并按照等级赋予相应的分数。这一制度的实施，旨在解决传统高考中不同科目之间分数不可比的问题，使不同科目之间的分数具有更强的可比性。</p><h1>考研你都需要知道些什么</h1><p>计算机学科专业基础综合（408）试卷满分150分；考试时间180分钟；</p><p>试卷内容结构：</p><p>数据结构45分，计算机组成原理45分，操作系统35分，<a href="https://zhida.zhihu.com/search?content_id=104724908&amp;content_type=Article&amp;match_order=1&amp;q=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C&amp;zhida_source=entity">计算机网络</a>25分；</p><p>试卷题型结构：单项选择题，80分（40小题，每小题2分）；综合题，70分；</p>]]></content>
+        <content type="html"><![CDATA[<h1>求导</h1><p><img src="https://files.catbox.moe/tr3pzu.jpg" alt=""></p>]]></content>
       
-      
-      <categories>
-          
-          <category> 考研 </category>
-          
-      </categories>
       
       
         <tags>
@@ -92,12 +176,18 @@
     
     
     <entry>
-      <title>高等数学</title>
-      <link href="/posts/93e4730e.html"/>
-      <url>/posts/93e4730e.html</url>
+      <title>考研知识点</title>
+      <link href="/posts/e5935d82.html"/>
+      <url>/posts/e5935d82.html</url>
       
-        <content type="html"><![CDATA[<h1>求导</h1><p><img src="https://files.catbox.moe/tr3pzu.jpg" alt=""></p>]]></content>
+        <content type="html"><![CDATA[<h1>赋分制是个什么东西</h1><p>赋分制的核心是根据考生成绩进行等级划分，并按照等级赋予相应的分数。这一制度的实施，旨在解决传统高考中不同科目之间分数不可比的问题，使不同科目之间的分数具有更强的可比性。</p><h1>考研你都需要知道些什么</h1><p>计算机学科专业基础综合（408）试卷满分150分；考试时间180分钟；</p><p>试卷内容结构：</p><p>数据结构45分，计算机组成原理45分，操作系统35分，<a href="https://zhida.zhihu.com/search?content_id=104724908&amp;content_type=Article&amp;match_order=1&amp;q=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C&amp;zhida_source=entity">计算机网络</a>25分；</p><p>试卷题型结构：单项选择题，80分（40小题，每小题2分）；综合题，70分；</p>]]></content>
       
+      
+      <categories>
+          
+          <category> 考研 </category>
+          
+      </categories>
       
       
         <tags>
